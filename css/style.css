@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, p {
   font-family: "Dosis", sans-serif;
   font-weight: 400; }
 
-#thanks-block, #name-block {
+#thanks-block, #name-block, #gender-block {
   display: none; }
 
 .block {
@@ -128,7 +128,8 @@ h1, h2, h3, h4, h5, p {
   margin: 20px;
   color: #fff;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
 
 .btn:active {
   transform: translate(0px, 5px);

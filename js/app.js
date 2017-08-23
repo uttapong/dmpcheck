@@ -14,6 +14,13 @@ $.fn.datepicker.language['en'] = {
 };
 
 $(document).ready(function(){
+    if(isCompleted()){
+        $('#gender-block').hide();
+        $('#thanks-block').show();
+        $('.middle>h1').hide();
+        return;
+    }
+    $('#gender-block').show(); 
    datepicker= $('#birthdate').datepicker({
         language:'en',
         inline:true,
@@ -25,12 +32,18 @@ $(document).ready(function(){
 
     $('#gender_confirm').click(
         function(){
+           
             $('#gender-block').hide();
             // $('.calendar').addClass('slideInRight');
             $('.calendar').show();
         });
     $('#birthdate_confirm').click(
         function(){
+            if( $('#selected_date').html()==""){
+                $('#selected_date').html("<span class='alert'>Please select your birthdate!</span>");
+                return;
+            }
+
             $('#birthdate-block').hide();
             // $('.calendar').addClass('slideInRight');
             $('#name-block').show();
@@ -38,15 +51,23 @@ $(document).ready(function(){
     
         $('#name_confirm').click(
             function(){
-                if( $('#selected_date').html()==""){
-                    $('#selected_date').html("<span class='alert'>Please select your birthdate!</span>");
+                if( $.trim($('#fullname').val()) ==""){
+                    $("#error").html("<span class='alert'>Please fill in your name!</span>");
                     return;
                 }
+
+                
                 $('#name-block').hide();
                 // $('.calendar').addClass('slideInRight');
                 $('.middle>h1').hide();
                 $('#thanks-block').show();
+                $.cookie('dmp_collector',"done");
             });
 });
 
-
+function isCompleted(){
+    if($.cookie('dmp_collector')){
+        return true;
+    }
+    else return false;
+}
