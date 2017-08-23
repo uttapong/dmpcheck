@@ -1,14 +1,12 @@
 {
-  "name": "CoreUI",
-  "version": "1.0.0-alpha.4 (jQuery & Static Version)",
+  "name": "dmpcheck",
+  "version": "0.0.1",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
-    "tether": "latest",
-    "jquery": "^3.0.0",
+    "jquery": "^3.2.1",
     "fontawesome": "latest",
-    "simple-line-icons": "latest",
-    "pace": "latest",
-    "chart.js": "^2.3.0"
+    "air-datepicker": "^2.2.3",
+    "moment": "^2.18.1",
+    "font-awesome": "fontawesome#^4.7.0"
   },
   "private": true
 }

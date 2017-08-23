@@ -62,7 +62,7 @@ gulp.task('clean:dist', function () {
 gulp.task('copy:bower', function () {
     return gulp.src(mainBowerFiles(['**/*.js', '!**/*.min.js']))
         .pipe(gulp.dest(paths.dist+'/js/libs'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(paths.dist+'/js/libs'));
 });

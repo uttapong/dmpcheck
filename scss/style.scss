@@ -1,79 +1,319 @@
-/**
- * CoreUI - Open Source Bootstrap Admin Template
- * @version v1.0.0-alpha.4
- * @link http://coreui.io
- * Copyright (c) 2017 creativeLabs Łukasz Holeczek
- * @license MIT
- */
-// Import normalize
-@import "bootstrap/normalize";
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
 
-// Override Boostrap variables
-@import "bootstrap-variables";
+@import url('https://fonts.googleapis.com/css?family=Baloo+Paaji');
 
-// Import Bootstrap source files
-@import "bootstrap/bootstrap";
+$primary-color: #1e90ff ;
+$secondary-color: #ffe221;
+$tertiary-color: #ffffff;
 
-// If you want you can import bootstrap scss files directly from node_modules or bower_components.
-// To do this please remove @import "bootstrap/bootstrap"; and uncomment proper line.
 
-// Import Bootstrap source files from node_modules
-// @import "node_modules/bootstrap/scss/bootstrap";
+$font: 'Dosis',sans-serif;
+$white: #fff;
+$green: #1e59af;
+$blue: #4085ee;
+$dark-blue: #1e59af;
+$light-blue: #5c9bf9;
+html {
+  background-color: $blue;
+  overflow: hidden;
+  padding-top: 20px;
+  color: #fff;
+  
+}
+input{
+  width: 280px;
+  height: 60px;
+  padding: 12px;
+  font-size: 1.5em;
+  font-family: $font;
+}
+.alert{
+  color: #ff927a;
+}
+.date{
+  font-size: 1.2em;
+}
+h1,h2,h3,h4,h5,p {
+  font-family:$font;
+  font-weight: 400;
+}
+#thanks-block, #name-block{
+  display:none;
+}
+.block{
+  text-align: center;
+  padding: 30px 0px;
+  .calendar{
+    display:none;
+    text-align: center;
+    margin: 0px auto;
+    width: 252px;
+    -webkit-animation: slide 0.5s ease-in;
+    animation: slide 0.5s ease-in;
+    position:relative;
+  }
+}
+.middle {
+  text-align: center;
+  width: 100%;
+  label{
+   
+  }
+  h1 {
+    font-family: $font;
+    color: $white;
+  }
+  input[type="radio"] {
+    display: none;
+    
+    &:checked {
+      + .box {
+        background-color: $dark-blue;
+        span {
+          color: white;
+          transform: translateY(70px);
+          &:before {
+            transform: translateY(-20px);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .box {
+    margin: 30px 10px;
+    width: 140px;
+    height: 140px;
+    background-color: $light-blue;
+    transition: all 250ms ease;
+    will-change: transition;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    font-family: $font;
+    font-weight: 900;
+    border-radius: 70px;
+    &:active{
+      transform: translateY(10px);
+    }
+    span {
+      position: absolute;
+      transform: translate(0, 35px);
+      left: 0;
+      right: 0;
+      transition: all 300ms ease;
+      font-size: 1em;
+      user-select: none;
+      color: $white;
+      &:before {
+        font-size: 1.4em;
+        font-family: FontAwesome;
+        display: block;
+        transform: translateY(-40px);
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+        font-weight: normal;
+        color: white;
+      }
+    }
+  }
+  .front-end {
+    span {
+      &:before {
+        content: '\f183';
+      }
+    }
+  }
+  .back-end {
+    span {
+      &:before {
+        content: '\f182';
+      }
+    }
+  }
+  
+  /* Made by */
+  p {
+    color: $white;
+    font-family: $font;
+    font-weight: 400;
+    span {
+      &:after {
+        
+        font-family: FontAwesome;
+        color: yellow;
+      }
+    }
+  }
+  h1{
+    color: $white;
+  }
+}
 
-// Import Bootstrap source files from bower_components
-// @import "bower_components/bootstrap/scss/bootstrap";
+@-webkit-keyframes slide {
+  0% { top: 100px; opacity: 0 }
+  100% { top: 0px; opacity: 1 }
+}
 
-// Import vendors styles
-@import "vendors/vendors";
+@keyframes slide {
+  0% { top: 100px; opacity: 0 }
+  100% { top: 0; opacity: 1}
+}
 
-// Import core styles
-@import "custom-variables";
-@import "core/mixins";
+/* start da css for da buttons */
+.btn {
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
 
-// Additional typography
-@import "core/typography";
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
 
-// Animations
-@import "core/animate";
+.blue {
+  background-color: #55acee;
+  box-shadow: 0px 5px 0px 0px #3C93D5;
+}
 
-// Core files
-@import "core/aside";
-@import "core/avatars";
-@import "core/badge";
-@import "core/breadcrumb-menu";
-@import "core/breadcrumb";
-@import "core/buttons";
-@import "core/callout";
-@import "core/card";
-@import "core/charts";
-@import "core/dropdown";
-@import "core/footer";
-@import "core/grid";
-@import "core/input-group";
-@import "core/layout";
-@import "core/loading";
-@import "core/modal";
-@import "core/nav";
-@import "core/navbar";
-@import "core/progress";
-@import "core/sidebar";
-@import "core/switches";
-@import "core/tables";
-@import "core/widgets";
+.blue:hover {
+  background-color: #6FC6FF;
+}
 
-@import "core/others";
 
-// Utility classes
-@import "core/utilities";
+/* copyright stuffs.. */
+p {
+  text-align: center;
+  color: #55acee;
+  padding-top: 20px;
+}
 
-// Temporary fixes
-@import "core/temp";
+/*******animation********/
+h1.title1{
+  font-size: 75px;
+  text-transform: uppercase;
+  
+  
+  span{
+    width: 100%;
+    float: left;
+    color: $tertiary-color;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: titleAnimation;
+    animation-timing-function:ease;
+    animation-duration: 3s;
+  }
+}
+h2.title2{
+  font-size: 75px;
+  text-transform: uppercase;
+  
+  
+  span{
+    width: 100%;
+    float: left;
+    color: $tertiary-color;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-name: lastAnimation;
+    animation-timing-function:ease;
+    animation-duration: 3s;
+  }
+}
+h1.title1 span{
+  animation-delay: 0.2s;
+  -webkit-animation-fill-mode: forwards;
 
-// Mobile View
-// @import "core/mobile";
+  &:first-child{
+    animation-delay: 0.7s;
 
-// Right-to-left
-@import "core/rtl";
+  }
 
-// Custom styles
-@import "custom";
+  &:last-child{
+    color: $secondary-color;
+    animation-delay: 0.5s;
+  }
+}
+
+h2.title2{ 
+ 
+  span{
+    animation-delay: 4.1s;
+    -webkit-animation-fill-mode: forwards;
+    &:first-child{
+      animation-delay: 4.2s;
+      margin-top: -300px;
+    }
+
+    &:last-child{
+      color: $secondary-color;
+      animation-delay: 4s;
+      margin-top: -200px;
+    }
+  }
+}
+
+
+
+@keyframes titleAnimation {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  20% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+       transform: translateY(0);
+       opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+       transform: translateY(0);
+       opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 100 0%);
+      clip-path: polygon(100% 0, 100% -0%, 0 100%, 100 0%);
+    
+  }
+}
+
+@keyframes lastAnimation {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  60% {
+      transform: translateY(0);
+      opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+       transform: translateY(0);
+       opacity: 1;
+      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+  }
+  
+}

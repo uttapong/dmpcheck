@@ -4,44 +4,17 @@
 
 		<!-- Basic -->
 		<meta charset="utf-8">
-		<title>Run Company</title>		
+		<title>DMP User Collector</title>		
 		<meta name="keywords" content="Run Company" />
 		<meta name="description" content="Porto - Responsive Run Company">
 		<meta name="author" content="okler.net">
 
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Web Fonts  -->
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
-
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/bootstrap.css">
-		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css">
-		<link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css" media="screen">
-		<link rel="stylesheet" href="vendor/owlcarousel/owl.theme.default.min.css" media="screen">
-		<link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
-
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="css/theme.css">
-		<link rel="stylesheet" href="css/theme-elements.css">
-		<link rel="stylesheet" href="css/theme-blog.css">
-		<link rel="stylesheet" href="css/theme-shop.css">
-		<link rel="stylesheet" href="css/theme-animate.css">
-
-		<!-- Current Page CSS -->
-		<link rel="stylesheet" href="vendor/rs-plugin/css/settings.css" media="screen">
-		<link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css" media="screen">
-
-		<!-- Skin CSS -->
-		<link rel="stylesheet" href="css/skins/default.css">
-
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/custom.css">
-
-		<!-- Head Libs -->
-		<script src="vendor/modernizr/modernizr.js"></script>
-
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="bower_components/air-datepicker/dist/css/datepicker.min.css">
+		<link rel="stylesheet" href="bower_components/air-datepicker/dist/css/datepicker.min.css">
 		<!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
@@ -53,422 +26,66 @@
 
 	</head>
 	<body>
-		<div class="body">
-			<header id="header">
-				<div class="container">
-					<div class="logo">
-						<a href="index.html">
-							<img alt="Porto" width="250" height="63"  data-sticky-width="160" data-sticky-width="33"  src="img/run_logo.png">
-						</a>
-					</div>
-					<div class="search">
-						<form id="searchForm" action="page-search-results.html" method="get">
-							<div class="input-group">
-								<input type="text" class="form-control search" name="q" id="q" placeholder="Search..." required>
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-								</span>
-							</div>
-						</form>
-					</div>
-					<nav>
-						<ul class="nav nav-pills nav-top">
-							<li>
-								<a href="about-us.html"><i class="fa fa-angle-right"></i>About Us</a>
-							</li>
-							<li>
-								<a href="contact-us.html"><i class="fa fa-angle-right"></i>Contact Us</a>
-							</li>
-							<li class="phone">
-								<span><i class="fa fa-phone"></i>(123) 456-7890</span>
-							</li>
-						</ul>
-					</nav>
-					<button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-						<i class="fa fa-bars"></i>
-					</button>
-				</div>
-				
-				<div class="navbar-collapse nav-main-collapse collapse">
-					<div class="container">
-						<ul class="social-icons">
-							<li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a></li>
-						</ul>
-						<nav class="nav-main mega-menu">
-							<ul class="nav nav-pills nav-main" id="mainMenu">
-								<li class="dropdown active">
-									<a class="dropdown-toggle" href="index.html">
-										Innovation
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="">Home - Default</a></li>
-										<li><a href="">Home - Corporate <span class="tip">hot</span></a></li>
-										<li><a href="">Home - Color</a></li>
-										
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" href="index.html">
-										News
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="index.html">Home - Default</a></li>
-										<li><a href="index-1.html">Home - Corporate <span class="tip">hot</span></a></li>
-										<li><a href="index-2.html">Home - Color</a></li>
-										
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" href="index.html">
-										Products & Services
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="">Home - Default</a></li>
-										<li><a href="index.html">Home - Corporate <span class="tip">hot</span></a></li>
-										<li><a href="index.html">Home - Color</a></li>
-										
-									</ul>
-								</li>
-								<li class="dropdown mega-menu-item mega-menu-fullwidth">
-									<a class="dropdown-toggle" href="#">
-										Career
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu">
-										<li>
-											<div class="mega-menu-content">
-												<div class="row">
-													
-													<div class="col-md-6">
-														<ul class="sub-menu">
-															<li>
-																<span class="mega-menu-sub-title">Headers</span>
-																<ul class="sub-menu">
-																	<li><a href="headers-overview.html">Overview</a></li>
-																	<li><a href="index.html">Header 2</a></li>
-																	<li><a href="index.html">Header 3</a></li>
-																	<li><a href="index.html">Header 4</a></li>
-																	<li><a href="index.html">Header 5</a></li>
-																	<li><a href="index.html">Header 6</a></li>
-																	<li><a href="index.html">Header 7 - Below Slider</a></li>
-																	<li><a href="index.html">Header 8 - Full Video</a></li>
-																	<li><a href="index.html">Header 9 - Narrow</a></li>
-																</ul>
-															</li>
-														</ul>
-													</div>
-													<div class="col-md-6">
-														<ul class="sub-menu">
-															<li>
-																<span class="mega-menu-sub-title">Header Account</span>
-																<ul class="sub-menu">
-																	<li><a href="index-header-signin.html">Header - Sign In / Sign Up</a></li>
-																	<li><a href="index-header-logged.html">Header - Logged</a></li>
-																</ul>
-																<span class="mega-menu-sub-title">Footers</span>
-																<ul class="sub-menu">
-																	<li><a href="index.html">Footer 1</a></li>
-																	<li><a href="index.html">Footer 2</a></li>
-																	<li><a href="index.html">Footer 3</a></li>
-																	<li><a href="index.html">Footer 4</a></li>
-																	<li><a href="index.html">Footer 5 - Light</a></li>
-																	<li><a href="index.html">Footer 6 - Light Narrow</a></li>
-																	<li><a href="index.html">Footer 7 - Color</a></li>
-																</ul>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a class="dropdown-toggle" href="#">
-										CSR
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="portfolio-4-columns.html">4 Columns</a></li>
-										<li><a href="portfolio-3-columns.html">3 Columns</a></li>
-										<li><a href="portfolio-2-columns.html">2 Columns</a></li>
-										<li><a href="portfolio-lightbox.html">Portfolio Lightbox</a></li>
-										<li><a href="portfolio-timeline.html">Portfolio Timeline</a></li>
-										<li><a href="portfolio-full-width.html">Portfolio Full Width</a></li>
-										<li><a href="portfolio-single-project.html">Single Project</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a class="" href="#">
-										Investor
-										
-									</a>
-								</li>
-							
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>
+		<div class="middle">
+  <h1>Please help us verify predicted data by </h1>
+	<div id="gender-block" class="block">
+		
+		<h2>Choose your gender</h2>
+  <label>
+  <input type="radio" name="gender" checked/>
+  <div class="front-end box">
+    <span>Male/ชาย</span>
+  </div>
+</label>
 
-			<div role="main" class="main">
-				<div class="slider-container" style="max-width: 1600px;margin: 0px auto;">
-					<div class="slider" id="revolutionSlider" data-plugin-revolution-slider data-plugin-options='{"startheight": 700}'>
-						<ul>
-							<li data-transition="fade" data-slotamount="13" data-masterspeed="300" >
-				
-								<img src="img/pic_01.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-				
-								
-								<!--<div class="tp-caption top-label lfl stl"
-									 data-x="227"
-									 data-y="180"
-									 data-speed="300"
-									 data-start="500"
-									 data-easing="easeOutExpo">DO YOU NEED A NEW</div>-->
-				
-							</li>
-							<li data-transition="fade" data-slotamount="5" data-masterspeed="1000" >
-				
-								<img src="img/pic_02.jpg" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
-				
-				
-									<!--<div class="tp-caption bottom-label sft stb"
-										 data-x="685"
-										 data-y="250"
-										 data-speed="500"
-										 data-start="2000"
-										 data-easing="easeOutExpo">Create slides with brushes and fonts.</div>-->
-				
-							</li>
-						</ul>
-					</div>
-					</div>
-				</div>
-				<div class="home-intro" id="home-intro"  style="max-width: 1600px;margin: 0px auto 60px auto;">
-					<div class="container">
-				
-						<div class="row">
-							<div class="col-md-8">
-								<p>
-									The fastest way to grow your business with the leader in <em>Technology</em>
-									<span>Check out our options and features included.</span>
-								</p>
-							</div>
-							<div class="col-md-4">
-								<div class="get-started">
-									<a href="#" class="btn btn-lg btn-primary">Contact Us Now!</a>
-									<div class="learn-more">or <a href="index.html">learn more.</a></div>
-								</div>
-							</div>
-						</div>
-				
-					</div>
-				</div>
-				
-				
-			
-				
-				<div class="container">
-				
-					<div class="row">
-						<div class="col-md-4">
-							<h2>Our <strong>Company</strong></h2>
-							<div class="row">
-								<div class="col-sm-12">
-									<p>SUZUKI, TOSHIBA and DENSO reached basic agreement to establish joint venture company for production of automotive lithium-ion battery packs in India
-Apr. 14, 2017 News ReleasesOrganization Announcement
-</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<h2>Our <strong>Strength</strong></h2>
-							<div class="row">
-								<div class="col-sm-12">
-									<p>DENSO to Build a New Plant at DENSO Iwate as Part of Efforts to Enhance the DENSO Group Production System</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<h2>Our <strong>Visions</strong></h2>
-							<div class="row">
-								<div class="col-sm-12">
-									<p>
-SUZUKI MOTOR CORPORATION (SUZUKI), TOSHIBA CORPORATION (TOSHIBA) and DENSO CORPORATION (DENSO) have reached basic agreement on establishing a joint venture company for production of automotive lithium-ion battery packs in India, and signed the agreement.</p>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-				
-					<hr class="tall" />
-				
-					<div class="row center">
-						<div class="col-md-12">
-							<h2 class="short word-rotator-title">
-								We're not the only ones
-								<strong>
-									<span class="word-rotate" data-plugin-options='{"delay": 3500, "animDelay": 400}'>
-										<span class="word-rotate-items">
-											<span>excited</span>
-											<span>happy</span>
-										</span>
-									</span>
-								</strong>
-								about Run Company...
-							</h2>
-						</div>
-					</div>
-					<div class="row center">
-						<div class="owl-carousel" data-plugin-options='{"items": 6, "autoplay": true, "autoplayTimeout": 3000}'>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-1.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-2.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-3.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-4.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-5.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-6.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-4.png" alt="">
-							</div>
-							<div>
-								<img class="img-responsive" src="img/logos/logo-2.png" alt="">
-							</div>
-						</div>
-					</div>
-				
-				</div>
-				
-				
-			</div>
- 
-			<footer id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="footer-ribbon">
-							<span>Get in Touch</span>
-						</div>
-						<div class="col-md-3">
-							<div class="newsletter">
-								<h4>Newsletter</h4>
-								<p>Keep up on our always evolving product features and technology. Enter your e-mail and subscribe to our newsletter.</p>
-			
-								<div class="alert alert-success hidden" id="newsletterSuccess">
-									<strong>Success!</strong> You've been added to our email list.
-								</div>
-			
-								<div class="alert alert-danger hidden" id="newsletterError"></div>
-			
-								<form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
-									<div class="input-group">
-										<input class="form-control" placeholder="Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
-										<span class="input-group-btn">
-											<button class="btn btn-default" type="submit">Go!</button>
-										</span>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<h4>Latest Tweets</h4>
-							<div id="tweet" class="twitter" data-plugin-tweets data-plugin-options='{"username": "", "count": 2}'>
-								<p>Please wait...</p>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="contact-details">
-								<h4>Contact Us</h4>
-								<ul class="contact">
-									<li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 1234 Rachada Rd. Hwuaykwang, Hwuaykwang Bangkok 11201</p></li>
-									<li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (66) 2-456-7890</p></li>
-									<li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:run@runcompany.com">admin@runcompany.com</a></p></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-2">
-							<h4>Follow Us</h4>
-							<div class="social-icons">
-								<ul class="social-icons">
-									<li class="facebook"><a href="http://www.facebook.com/" target="_blank" data-placement="bottom" data-tooltip title="Facebook">Facebook</a></li>
-									<li class="twitter"><a href="http://www.twitter.com/" target="_blank" data-placement="bottom" data-tooltip title="Twitter">Twitter</a></li>
-									<li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" data-placement="bottom" data-tooltip title="Linkedin">Linkedin</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-copyright">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-1">
-								<a href="index.html" class="logo">
-									<img alt="Porto Website Template" class="img-responsive" src="img/run_logo.png">
-								</a>
-							</div>
-							<div class="col-md-7">
-								<p>© Copyright 2017. All Rights Reserved.</p>
-							</div>
-							<div class="col-md-4">
-								<nav id="sub-menu">
-									<ul>
-										<li><a href="page-faq.html">FAQ's</a></li>
-										<li><a href="sitemap.html">Sitemap</a></li>
-										<li><a href="contact-us.html">Contact</a></li>
-									</ul>
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-		</div>
+  <label>
+  <input type="radio" name="gender"/>
+  <div class="back-end box">
+    <span>Female/หญิง</span>
+  </div>
+</label>
+<p><a id="gender_confirm" class='btn blue'>Confirm</a></p>
+</div>
 
-		<!-- Vendor -->
-		<script src="vendor/jquery/jquery.js"></script>
-		<script src="vendor/jquery.appear/jquery.appear.js"></script>
-		<script src="vendor/jquery.easing/jquery.easing.js"></script>
-		<script src="vendor/jquery-cookie/jquery-cookie.js"></script>
-		<script src="vendor/bootstrap/bootstrap.js"></script>
-		<script src="vendor/common/common.js"></script>
-		<script src="vendor/jquery.validation/jquery.validation.js"></script>
-		<script src="vendor/jquery.stellar/jquery.stellar.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js"></script>
-		<script src="vendor/jquery.gmap/jquery.gmap.js"></script>
-		<script src="vendor/isotope/jquery.isotope.js"></script>
-		<script src="vendor/owlcarousel/owl.carousel.js"></script>
-		<script src="vendor/jflickrfeed/jflickrfeed.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
-		<script src="vendor/vide/vide.js"></script>
+<div id="birthdate-block" class="block">
 		
-		<!-- Theme Base, Components and Settings -->
-		<script src="js/theme.js"></script>
+	<div class="calendar animate">
+			<h2>Choose your birthdate</h2>
+	<div id="birthdate"></div>
+	<p class="date"><span id="selected_date"></span></p>
+	<p><a id="birthdate_confirm" class='btn blue'>Confirm</a></p>
+	</div>
+
+  
+</div>
+
+<div id="thanks-block" class="block">
 		
-		<!-- Specific Page Vendor and Views -->
-		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="vendor/circle-flip-slideshow/js/jquery.flipshow.js"></script>
-		<script src="js/views/view.home.js"></script>
-		
-		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
-		
-		<!-- Theme Initialization Files -->
-		<script src="js/theme.init.js"></script>
+		<h1 class="title1">
+				<span>Thank you</span>
+				<span>for your</span>
+				<span>cooperation</span>
+			</h1>
+			<h2 class="title2">
+				<span>Thank you</span>
+				<span>from ISG</span>
+			</h2>
+</div>
+
+<div id="name-block" class="block">
+		<h2>Your Full Name in English</h2>
+		<input type="text" name="fullname" placeholder="Full Name in English">
+		<p><a id="name_confirm" class='btn blue'>Confirm</a></p>
+</div>
+
+</div>
+
+
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/air-datepicker/dist/js/datepicker.min.js"></script>
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="js/app.js"></script>
 
 
 	</body>
