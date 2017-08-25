@@ -1,19 +1,25 @@
 
 
-$.fn.datepicker.language['en'] = {
-    days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-    daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-    daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-    months: ['January','February','March','April','May','June', 'July','August','September','October','November','December'],
-    monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    today: 'Today',
-    clear: 'Clear',
-    dateFormat: 'mm/dd/yyyy',
-    timeFormat: 'hh:ii aa',
-    firstDay: 0
-};
+// $.fn.datepicker.language['en'] = {
+//     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+//     daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+//     daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+//     months: ['January','February','March','April','May','June', 'July','August','September','October','November','December'],
+//     monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+//     today: 'Today',
+//     clear: 'Clear',
+//     dateFormat: 'mm/dd/yyyy',
+//     timeFormat: 'hh:ii aa',
+//     firstDay: 0
+// };
 
 $(document).ready(function(){
+    $("#birthdate").combodate({
+        minYear: 1950,
+        maxYear: 2010,
+        firstItem:'none'
+    });   
+
     if(isCompleted()){
         $('#gender-block').hide();
         $('#thanks-block').show();
@@ -21,14 +27,6 @@ $(document).ready(function(){
         return;
     }
     $('#gender-block').show(); 
-   datepicker= $('#birthdate').datepicker({
-        language:'en',
-        inline:true,
-        dateFormat: "d MM yyyy",
-        onSelect:function(format,dateObj){
-            $('#selected_date').html(moment(dateObj.toString()).format("Do MMM YYYY"));
-        }
-    })
 
     $('#gender_confirm').click(
         function(){
@@ -39,14 +37,13 @@ $(document).ready(function(){
         });
     $('#birthdate_confirm').click(
         function(){
-            if( $('#selected_date').html()==""){
-                $('#selected_date').html("<span class='alert'>Please select your birthdate!</span>");
-                return;
-            }
 
             $('#birthdate-block').hide();
             // $('.calendar').addClass('slideInRight');
             $('#name-block').show();
+            $('.middle>h1').hide();
+            $('#thanks-block').show();
+            $.cookie('dmp_collector',"done");
         });
     
         $('#name_confirm').click(
@@ -55,8 +52,6 @@ $(document).ready(function(){
                     $("#error").html("<span class='alert'>Please fill in your name!</span>");
                     return;
                 }
-
-                
                 $('#name-block').hide();
                 // $('.calendar').addClass('slideInRight');
                 $('.middle>h1').hide();

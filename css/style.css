@@ -6,12 +6,14 @@ html {
   padding-top: 20px;
   color: #fff; }
 
-input {
-  width: 280px;
+input, select {
   height: 60px;
   padding: 12px;
   font-size: 1.5em;
-  font-family: "Dosis", sans-serif; }
+  font-family: "Dosis", sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .alert {
   color: #ff927a; }
