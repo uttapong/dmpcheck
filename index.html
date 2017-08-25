@@ -55,7 +55,7 @@
 
         <h2>Choose your gender</h2>
         <label>
-  <input type="radio" name="gender" value="mail" checked/>
+  <input type="radio" name="gender" value="male"/>
   <div class="front-end box">
     <span>Male</span>
   </div>
@@ -74,7 +74,7 @@
 
         <div class="calendar animate">
           <h2>Choose your birthdate</h2>
-          <input id="birthdate" name="date_of_birth" value="15-05-1984" data-format="D-MM-YYYY" data-template="D MMM YYYY">
+          <input id="birthdate" name="date_of_birth" data-format="D-MM-YYYY" data-template="D MMM YYYY">
           <p class="date"><span id="selected_date"></span></p>
           <p><a id="birthdate_confirm" class='btn blue'>Confirm</a></p>
         </div>
@@ -111,26 +111,29 @@
         $("#birthdate").combodate({
           minYear: 1950,
           maxYear: 2010,
-          firstItem: 'none'
+          firstItem: 'name'
         });
         // console.log($.cookie('dmp_collector'));
         if ($.cookie('dmp_collector')) {
           // alert('redirect to dashboard');
-          window.location.href = "http://intranet.sanookonline.co.th/dashboard";
+          // window.location.href = "http://intranet.sanookonline.co.th/dashboard";
           return;
         }
         $('#gender-block').show();
 
         $('#gender_confirm').click(
           function () {
-            gender = $("input[name='gender']:checked").val();
+						gender = $("input[name='gender']:checked").val();
+						if(!gender)return;
             $('#gender-block').hide();
             // $('.calendar').addClass('slideInRight');
             $('.calendar').show();
           });
         $('#birthdate_confirm').click(
           function () {
-            birthDate = $("#birthdate").combodate('getValue', "YYYY-MM-DD");
+						birthDate = $("#birthdate").combodate('getValue', "YYYY-MM-DD");
+						if(!birthDate)return;
+            
             $('#birthdate-block').hide();
             $('#name-block').show();
             $('.middle>.help').hide();
