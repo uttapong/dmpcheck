@@ -4,11 +4,10 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "fontawesome": "latest",
-    "air-datepicker": "^2.2.3",
-    "moment": "^2.18.1",
     "font-awesome": "fontawesome#^4.7.0",
     "jquery.cookie": "^1.4.1",
-    "combodate": "^1.1.0"
+    "combodate": "^1.1.0",
+    "moment": "^2.18.1"
   },
   "private": true
 }

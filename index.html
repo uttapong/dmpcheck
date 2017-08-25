@@ -1,170 +1,156 @@
 <!DOCTYPE html>
 <html>
-	<head>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <title>DMP User Collector</title>
+    <meta name="keywords" content="DMP" />
+    <meta name="description" content="DMP Data Collector">
+    <meta name="author" content="isg">
 
-		<!-- Basic -->
-		<meta charset="utf-8">
-		<title>DMP User Collector</title>		
-		<meta name="keywords" content="Run Company" />
-		<meta name="description" content="Porto - Responsive Run Company">
-		<meta name="author" content="okler.net">
-
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="bower_components/air-datepicker/dist/css/datepicker.min.css">
-		<link rel="stylesheet" href="bower_components/air-datepicker/dist/css/datepicker.min.css">
-		<!--[if IE]>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!--[if IE]>
 			<link rel="stylesheet" href="css/ie.css">
 		<![endif]-->
 
-		<!--[if lte IE 8]>
+    <!--[if lte IE 8]>
 			<script src="vendor/respond/respond.js"></script>
 			<script src="vendor/excanvas/excanvas.js"></script>
 		<![endif]-->
-		<script>
-				// ISG Stat.
-				// Please Do not edit this code below
-				function async(u, c) {
-						var d = document, t = 'script',
-								o = d.createElement(t),
-								s = d.getElementsByTagName(t)[0];
-						o.src = '//' + u;
-						if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-						s.parentNode.insertBefore(o, s);
-				}
-		
-				async('p3.isanook.com/jo/0/mu/evt/survey/js/script_sdk.min.js', function() {
-						StatAsync.init('sanookStat', 'usersAct');
-						StatAsync.collectListener();
-				});
-		</script>
+    <script>
+      // ISG Stat.
+      // Please Do not edit this code below
+      function async(u, c) {
+        var d = document,
+          t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        o.src = '//' + u;
+        if (c) {
+          o.addEventListener('load', function (e) {
+            c(null, e);
+          }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+      }
 
-	</head>
-	<body>
-		<div class="middle">
-  <h1>Please help us verify predicted data by </h1>
-	<div id="gender-block" class="block">
-		
-		<h2>Choose your gender</h2>
-  <label>
+      async('p3.isanook.com/jo/0/mu/evt/survey/js/script_sdk.min.js', function () {
+        StatAsync.init('sanookStat', 'usersAct');
+        StatAsync.collectListener();
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+    <div class="middle">
+			<img src="http://intranet.sanookonline.co.th/assets/di/Tencent.png" />
+			<h1>Data Management Platform</h1>
+      <h2 class="help">Please help us verify predicted data by </h2>
+      <div id="gender-block" class="block">
+
+        <h2>Choose your gender</h2>
+        <label>
   <input type="radio" name="gender" value="mail" checked/>
   <div class="front-end box">
-    <span>Male/ชาย</span>
+    <span>Male</span>
   </div>
 </label>
 
-  <label>
+        <label>
   <input type="radio" name="gender" value="female"/>
   <div class="back-end box">
-    <span>Female/หญิง</span>
+    <span>Female</span>
   </div>
 </label>
-<p><a id="gender_confirm" class='btn blue'>Confirm</a></p>
-</div>
+        <p><a id="gender_confirm" class='btn blue'>Confirm</a></p>
+      </div>
 
-<div id="birthdate-block" class="block">
-		
-	<div class="calendar animate">
-			<h2>Choose your birthdate</h2>
-			<input id="birthdate" name="date_of_birth" value="15-05-1984" data-format="D-MM-YYYY" data-template="D MMM YYYY"> 
-	<p class="date"><span id="selected_date"></span></p>
-	<p><a id="birthdate_confirm" class='btn blue'>Confirm</a></p>
-	</div>
+      <div id="birthdate-block" class="block">
 
-  
-</div>
+        <div class="calendar animate">
+          <h2>Choose your birthdate</h2>
+          <input id="birthdate" name="date_of_birth" value="15-05-1984" data-format="D-MM-YYYY" data-template="D MMM YYYY">
+          <p class="date"><span id="selected_date"></span></p>
+          <p><a id="birthdate_confirm" class='btn blue'>Confirm</a></p>
+        </div>
 
-<div id="thanks-block" class="block">
-		
-		<h1 class="title1">
-				<span>Thank you</span>
-				<span>for your</span>
-				<span>cooperation</span>
-			</h1>
-			<h2 class="title2">
-				<span>Thank you</span>
-				<span>from ISG</span>
-			</h2>
-</div>
+      </div>
 
-<!-- <div id="name-block" class="block">
-		<h2>Your Full Name in English</h2>
-		<input id="fullname" type="text" name="fullname" placeholder="Full Name in English">
-		<p id="error"></p>
-		<p><a id="name_confirm" class='btn blue'>Confirm</a></p>
-</div> -->
+      <div id="thanks-block" class="block">
 
-</div>
+        <h1 class="title1">
+          <span>Thank you</span>
+          <span>for your</span>
+          <span>cooperation</span>
+        </h1>
+        <h2 class="title2">
+          <span>Thank you</span>
+          <span>from ISG</span>
+				</h2>
+				<a href="http://intranet.sanookonline.co.th/dashboard" class="proceed btn blue">Proceed to Intranet</a>
+      </div>
+    </div>
 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/moment/min/moment.min.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/combodate/src/combodate.js"></script>
+    <script>
+      var birthDate = "";
+      var gender = "";
 
+      /*email from intranet authened user*/
+      var email = "email@domain.com";
 
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/air-datepicker/dist/js/datepicker.min.js"></script>
-<script src="bower_components/moment/min/moment.min.js"></script>
-<script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
-<script src="bower_components/combodate/src/combodate.js"></script>
+      $(document).ready(function () {
+        $("#birthdate").combodate({
+          minYear: 1950,
+          maxYear: 2010,
+          firstItem: 'none'
+        });
+        // console.log($.cookie('dmp_collector'));
+        if ($.cookie('dmp_collector')) {
+          // alert('redirect to dashboard');
+          window.location.href = "http://intranet.sanookonline.co.th/dashboard";
+          return;
+        }
+        $('#gender-block').show();
 
-<script>
-	var birthDate="";
-	var gender="";
+        $('#gender_confirm').click(
+          function () {
+            gender = $("input[name='gender']:checked").val();
+            $('#gender-block').hide();
+            // $('.calendar').addClass('slideInRight');
+            $('.calendar').show();
+          });
+        $('#birthdate_confirm').click(
+          function () {
+            birthDate = $("#birthdate").combodate('getValue', "YYYY-MM-DD");
+            $('#birthdate-block').hide();
+            $('#name-block').show();
+            $('.middle>.help').hide();
+            $('#thanks-block').show();
 
-	/*email from intranet authened user*/
-	var email="test@xxx.com";
+            console.log("birthDate " + birthDate);
+            console.log("gender " + gender);
+            console.log("email " + email);
+            StatAsync.collectEvent('sanookSurvey', 'sanookInternal', {
+              'c1': birthDate,
+              'c2': gender,
+              'c3': email
+            });
+            $.cookie('dmp_collector',"done");
+          });
 
-		$(document).ready(function(){
-	$("#birthdate").combodate({
-			minYear: 1950,
-			maxYear: 2010,
-			firstItem:'none'
-	});   
-	console.log($.cookie('dmp_collector'));
-	if($.cookie('dmp_collector')){
-			alert('redirect to dashboard');
-			// window.location.href = "http://intranet.sanookonline.co.th/dashboard";
-			return;
-	}
-	$('#gender-block').show(); 
+      });
 
-	$('#gender_confirm').click(
-			function(){
-				gender=$("input[name='gender']:checked").val();
-					$('#gender-block').hide();
-					// $('.calendar').addClass('slideInRight');
-					$('.calendar').show();
-			});
-	$('#birthdate_confirm').click(
-			function(){
-				birthDate=$("#birthdate").combodate('getValue', "YYYY-MM-DD");
-					$('#birthdate-block').hide();
-					// $('.calendar').addClass('slideInRight');
-					$('#name-block').show();
-					$('.middle>h1').hide();
-					$('#thanks-block').show();
+    </script>
+    <a>
+  </body>
 
-					console.log("birthDate "+birthDate);
-					console.log("gender "+gender);
-					console.log("email "+email);
-					StatAsync.collectEvent('sanookSurvey', 'sanookInternal', {'c1': birthDate, 'c2': gender, 'c3': email});
-
-					// $.cookie('dmp_collector',"done");
-			});
-	
-			// $('#name_confirm').click(
-			// 		function(){
-			// 				if( $.trim($('#fullname').val()) ==""){
-			// 						$("#error").html("<span class='alert'>Please fill in your name!</span>");
-			// 						return;
-			// 				}
-			// 				$('#name-block').hide();
-			// 				// $('.calendar').addClass('slideInRight');
-			// 				$('.middle>h1').hide();
-			// 				$('#thanks-block').show();
-							
-			// 				// $.cookie('dmp_collector',"done");
-			// 		});
-});
-		</script>
-	</body>
 </html>

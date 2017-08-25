@@ -1,26 +1,36 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
-
 @import url('https://fonts.googleapis.com/css?family=Baloo+Paaji');
-
-$primary-color: #1e90ff ;
+$primary-color: #1e90ff;
 $secondary-color: #ffe221;
 $tertiary-color: #ffffff;
-
-
-$font: 'Dosis',sans-serif;
+$font: 'Dosis',
+sans-serif;
 $white: #fff;
 $green: #1e59af;
 $blue: #4085ee;
 $dark-blue: #1e59af;
 $light-blue: #5c9bf9;
+$faded-blue: #40bced;
+$faded-dark-blue: #2374ED;
 html {
-  background-color: $blue;
+  background: #4085ee;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, $faded-dark-blue 0%, $faded-blue 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, $faded-dark-blue 0%, $faded-blue 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, $faded-dark-blue 0%, $faded-blue 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$faded-dark-blue', endColorstr='$faded-blue', GradientType=0);
+  /* IE6-9 */
+  height: 100%;
   overflow: hidden;
   padding-top: 20px;
   color: #fff;
-  
 }
-input,select{
+
+input,
+select {
   // width: 280px;
   height: 60px;
   padding: 12px;
@@ -30,47 +40,61 @@ input,select{
   -moz-appearance: none;
   appearance: none;
 }
-.alert{
+
+.proceed {
+  font-family: $font;
+}
+
+.alert {
   color: #ff927a;
 }
-.date{
+
+.date {
   font-size: 1.2em;
 }
-h1,h2,h3,h4,h5,p {
-  font-family:$font;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  font-family: $font;
   font-weight: 400;
 }
-#thanks-block, #name-block, #gender-block{
-  display:none;
+
+#thanks-block,
+#name-block,
+#gender-block {
+  display: none;
 }
-.block{
+
+.block {
   text-align: center;
   padding: 30px 0px;
-  .calendar{
-    display:none;
+  .calendar {
+    display: none;
     text-align: center;
     margin: 0px auto;
     width: 252px;
     -webkit-animation: slide 0.5s ease-in;
     animation: slide 0.5s ease-in;
-    position:relative;
+    position: relative;
   }
 }
+
 .middle {
   text-align: center;
   width: 100%;
-  label{
-   
-  }
+  label {}
   h1 {
     font-family: $font;
     color: $white;
   }
   input[type="radio"] {
     display: none;
-    
     &:checked {
-      + .box {
+      +.box {
         background-color: $dark-blue;
         span {
           color: white;
@@ -97,7 +121,7 @@ h1,h2,h3,h4,h5,p {
     font-family: $font;
     font-weight: 900;
     border-radius: 70px;
-    &:active{
+    &:active {
       transform: translateY(10px);
     }
     span {
@@ -106,7 +130,7 @@ h1,h2,h3,h4,h5,p {
       left: 0;
       right: 0;
       transition: all 300ms ease;
-      font-size: 1em;
+      font-size: 1.2em;
       user-select: none;
       color: $white;
       &:before {
@@ -124,18 +148,17 @@ h1,h2,h3,h4,h5,p {
   .front-end {
     span {
       &:before {
-        content: '\f183';
+        content: '\f00c';
       }
     }
   }
   .back-end {
     span {
       &:before {
-        content: '\f182';
+        content: '\f00c';
       }
     }
   }
-  
   /* Made by */
   p {
     color: $white;
@@ -143,28 +166,41 @@ h1,h2,h3,h4,h5,p {
     font-weight: 400;
     span {
       &:after {
-        
         font-family: FontAwesome;
         color: yellow;
       }
     }
   }
-  h1{
+  h1 {
     color: $white;
   }
 }
 
 @-webkit-keyframes slide {
-  0% { top: 100px; opacity: 0 }
-  100% { top: 0px; opacity: 1 }
+  0% {
+    top: 100px;
+    opacity: 0
+  }
+  100% {
+    top: 0px;
+    opacity: 1
+  }
 }
 
 @keyframes slide {
-  0% { top: 100px; opacity: 0 }
-  100% { top: 0; opacity: 1}
+  0% {
+    top: 100px;
+    opacity: 0
+  }
+  100% {
+    top: 0;
+    opacity: 1
+  }
 }
 
+
 /* start da css for da buttons */
+
 .btn {
   border-radius: 5px;
   padding: 15px 25px;
@@ -194,19 +230,20 @@ h1,h2,h3,h4,h5,p {
 
 
 /* copyright stuffs.. */
+
 p {
   text-align: center;
   color: #55acee;
   padding-top: 20px;
 }
 
+
 /*******animation********/
-h1.title1{
+
+h1.title1 {
   font-size: 75px;
   text-transform: uppercase;
-  
-  
-  span{
+  span {
     width: 100%;
     float: left;
     color: $tertiary-color;
@@ -215,16 +252,15 @@ h1.title1{
     transform: translateY(-50px);
     opacity: 0;
     animation-name: titleAnimation;
-    animation-timing-function:ease;
+    animation-timing-function: ease;
     animation-duration: 3s;
   }
 }
-h2.title2{
+
+h2.title2 {
   font-size: 75px;
   text-transform: uppercase;
-  
-  
-  span{
+  span {
     width: 100%;
     float: left;
     color: $tertiary-color;
@@ -233,36 +269,32 @@ h2.title2{
     transform: translateY(-50px);
     opacity: 0;
     animation-name: lastAnimation;
-    animation-timing-function:ease;
+    animation-timing-function: ease;
     animation-duration: 3s;
   }
 }
-h1.title1 span{
+
+h1.title1 span {
   animation-delay: 0.2s;
   -webkit-animation-fill-mode: forwards;
-
-  &:first-child{
+  &:first-child {
     animation-delay: 0.7s;
-
   }
-
-  &:last-child{
+  &:last-child {
     color: $secondary-color;
     animation-delay: 0.5s;
   }
 }
 
-h2.title2{ 
- 
-  span{
+h2.title2 {
+  span {
     animation-delay: 4.1s;
     -webkit-animation-fill-mode: forwards;
-    &:first-child{
+    &:first-child {
       animation-delay: 4.2s;
       margin-top: -300px;
     }
-
-    &:last-child{
+    &:last-child {
       color: $secondary-color;
       animation-delay: 4s;
       margin-top: -200px;
@@ -270,54 +302,50 @@ h2.title2{
   }
 }
 
-
-
 @keyframes titleAnimation {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 100%);
   }
   20% {
-      transform: translateY(0);
-      opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
   80% {
-       transform: translateY(0);
-       opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
   100% {
-       transform: translateY(0);
-       opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 100 0%);
-      clip-path: polygon(100% 0, 100% -0%, 0 100%, 100 0%);
-    
+    transform: translateY(0);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 100 0%);
+    clip-path: polygon(100% 0, 100% -0%, 0 100%, 100 0%);
   }
 }
 
 @keyframes lastAnimation {
-    0% {
-      transform: translateY(-50px);
-      opacity: 0;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
   }
   60% {
-      transform: translateY(0);
-      opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
   100% {
-       transform: translateY(0);
-       opacity: 1;
-      -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
-      clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0%);
   }
-  
 }
