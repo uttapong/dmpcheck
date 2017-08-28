@@ -9,7 +9,7 @@
     <meta name="author" content="isg">
 
     <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <!--[if IE]>
@@ -116,7 +116,7 @@
         // console.log($.cookie('dmp_collector'));
         if ($.cookie('dmp_collector')) {
           // alert('redirect to dashboard');
-          // window.location.href = "http://intranet.sanookonline.co.th/dashboard";
+          window.location.href = "http://intranet.sanookonline.co.th/dashboard";
           return;
         }
         $('#gender-block').show();
@@ -133,7 +133,7 @@
           function () {
 						birthDate = $("#birthdate").combodate('getValue', "YYYY-MM-DD");
 						if(!birthDate)return;
-            
+
             $('#birthdate-block').hide();
             $('#name-block').show();
             $('.middle>.help').hide();
